@@ -16,3 +16,28 @@ models/
 
 
 .vscode/
+
+# Data and outputs
+dataset_medium/
+dataset_subset_8h/
+processed_medium/
+output_videos/
+output_videos_3d/
+output_videos_final/
+output_videos_full_2d/
+*.avi
+*.jpeg
+*.jpg
+*.png
+*.mp4
+*.mov
+*.txt
+*.log
+*.pdf
+*.pptx
+*.docx
+*.xlsx
+*.csv
+webapp/uploads/
+webapp/outputs/
+yolov8n.pt

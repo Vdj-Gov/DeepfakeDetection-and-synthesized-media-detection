@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Deepfake Demo Uploader</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 720px; margin: 40px auto; }
+      .card { border: 1px solid #ddd; padding: 20px; border-radius: 6px; }
+      input[type=file] { display:block; margin-bottom:12px; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Upload a sample video</h2>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="video" accept="video/*" required>
+        <button type="submit">Upload & Process</button>
+      </form>
+      <p>Processed video will display labels and bounding boxes for detected faces.</p>
+    </div>
+  </body>
+</html>
