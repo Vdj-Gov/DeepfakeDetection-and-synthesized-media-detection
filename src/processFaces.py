@@ -2,11 +2,11 @@ import os
 from tqdm import tqdm
 from faceDetector import detectAndSaveFaces
 
-realFramesPath = "processed/frames/real"
-fakeFramesPath = "processed/frames/fake"
+realFramesPath = "processed_medium/frames/real"
+fakeFramesPath = "processed_medium/frames/fake"
 
-outputRealFaces = "processed/faces/real"
-outputFakeFaces = "processed/faces/fake"
+outputRealFaces = "processed_medium/faces/real"
+outputFakeFaces = "processed_medium/faces/fake"
 
 def processFaceFolder(framesRoot, outputRoot):
     os.makedirs(outputRoot, exist_ok=True)

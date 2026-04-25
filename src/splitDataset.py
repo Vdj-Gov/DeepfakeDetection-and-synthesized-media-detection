@@ -2,10 +2,10 @@ import os
 import shutil
 import random
 
-realPath = "processed/faces/real"
-fakePath = "processed/faces/fake"
+realPath = "processed_medium/faces/real"
+fakePath = "processed_medium/faces/fake"
 
-outputRoot = "processed/splits"
+outputRoot = "processed_medium/splits"
 
 trainRatio = 0.8
 

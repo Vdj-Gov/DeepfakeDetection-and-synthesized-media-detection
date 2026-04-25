@@ -2,11 +2,11 @@ import os
 from tqdm import tqdm
 from frameExtractor import extractFrames
 
-realPath = "dataset_subset/real"
-fakePath = "dataset_subset/fake"
+realPath = "dataset_medium/real"
+fakePath = "dataset_medium/fake"
 
-outputReal = "processed/frames/real"
-outputFake = "processed/frames/fake"
+outputReal = "processed_medium/frames/real"
+outputFake = "processed_medium/frames/fake"
 
 def processFolder(inputPath, outputPath):
     os.makedirs(outputPath, exist_ok=True)

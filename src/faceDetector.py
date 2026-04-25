@@ -13,20 +13,21 @@ def detectAndSaveFaces(inputFolder, outputFolder):
         imagePath = os.path.join(inputFolder, imageName)
         image = cv2.imread(imagePath)
 
-        # Detect faces using RetinaFace
-        faces = RetinaFace.detect_faces(image)
+        # Detect faces using Haar Cascades
+        faceCascade = cv2.CascadeClassifier(
+            cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
+        )
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        faces = faceCascade.detectMultiScale(gray, 1.3, 5)
 
         # If no faces detected, skip image
-        if not faces:
+        if len(faces) == 0:
             continue
 
         # Iterate over detected faces (usually 1 in FaceForensics)
-        for key in faces:
-            faceData = faces[key]
-            x1, y1, x2, y2 = faceData["facial_area"]
-
+        for (x, y, w, h) in faces:
             # Crop face region
-            face = image[y1:y2, x1:x2]
+            face = image[y:y+h, x:x+w]
 
             if face.size == 0:
                 continue
